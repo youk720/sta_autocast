@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta name="author" content="" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<title>駅自動放送シミュレーター</title>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+
+<style type="text/css">
+body{
+	}
+</style>
+
+<!--JavaScript読み込みに関するコードは削除しないでください-->
+<script type="text/javascript" src="setting.js" charset="UTF-8"></script>
+<script type="text/javascript" src="main.js" charset="UTF-8"></script>
+
+<script type="text/javascript">
+</script>
+</head>
+
+<body>
+
+
+<!-- 以下のJavaScript読み込みに関するコードは削除しないでください -->
+<table border="0"class="">
+  <tr>
+    <td>
+パーツ一覧<br />
+<select size='20' id='partsListSelect' style='font-size:16px;' onChange='' ondblclick='setSoundParts()' class="form-control">
+  <!-- ondblclickはタブルクリックした時の処理 -->
+<script type="text/javascript">
+for(i=0 ; i<soundData.length ; i++)
+{
+	document.write("<option value=''>"+soundData[i][1]+"</option>");
+  <!-- setting.js 内のsoundDataにあるだけ(for文より)書き出す -->
+ }
+</script>
+</select>
+<br />
+<span style="font-size:60%">ダブルクリックまたは右のボタンで追加</span>
+    </td>
+    <td>
+ <input type="button" id="" class="btn btn-default" value=">>追加>>" onclick="setSoundParts()" style='font-size:16px;' />
+    </td>
+    <td>
+放送文章<br />
+<textarea id="inputTextarea" rows="20" cols="30" style='font-size:16px;' class="form-control"></textarea>
+    </td> -->
+
+      <!--classにボタンの種類を指定-->
+  </tr>
+</table>
+<br />
+<!-- コピペしたシュミレータコード -->
+<input type="button" id="announceStartButton" value="　★自動放送開始★　" onclick="checkInput()" style='font-size:16px;' class="btn btn-info"/>
+　<input type="button" id="announceStartButton" value="　リセット　" onclick="resetInput()" style='font-size:16px;' class="btn btn-danger"/>　
+<br />
+
+<audio id="audio0" src="sound/null-250.mp3" height='0'></audio>
+
+<script type="text/javascript">
+main();
+</script>
+
+<div id="log"></div>
+
+
+
+    <div>
+
+    </div>
+</div>
+
+<!--上記のJavaScript読み込みに関するコードは削除しないでください-->
+
+
+<!--説明文章を記載する場合は、以下を編集してください。-->
+<h2>このシミュレーターについて</h2>
+
+<h2>駅自動放送シミュレーター プログラム配布元</h2>
+このシミュレーターは、下記一般公開/配布されている自動放送シミュレーターのプログラムから作成しました。<br />
+<a href="http://r113.web.fc2.com/p/announce/jrw-osaka-loop/index.html" target="_blank">http://r113.web.fc2.com/p/announce/jrw-osaka-loop/index.html</a>
+
+
+
+</body>
+</html>
