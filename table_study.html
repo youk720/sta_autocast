@@ -19,7 +19,7 @@
   <div>
   <table class="table table-bordered">
     <tr>
-      <th><p>放送番線</p><br>
+      <th><p>放送番線</p>
         <select name="bansen">
         <option value="">番線選択</option>
         <option value="">1番線</option>
@@ -43,6 +43,104 @@
     <!-- http://www.htmq.com/html5/option.shtml -->
       </select>
     </th>
+    <th><p>発車時刻入力</p><p>
+      <select name="time_h">
+        <option value="">0</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+        <option value="">10</option>
+        <option value="">11</option>
+        <option value="">12</option>
+        <option value="">13</option>
+        <option value="">14</option>
+        <option value="">15</option>
+        <option value="">16</option>
+        <option value="">17</option>
+        <option value="">18</option>
+        <option value="">19</option>
+        <option value="">20</option>
+        <option value="">21</option>
+        <option value="">22</option>
+        <option value="">23</option>
+      </select>時
+      <select name="time_10m">
+        <option value="">0</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+      </select>
+      <select name="time_1m">
+        <option value="">0</option>
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        <option value="">4</option>
+        <option value="">5</option>
+        <option value="">6</option>
+        <option value="">7</option>
+        <option value="">8</option>
+        <option value="">9</option>
+      </select>分</p>
+    </th>
+    <th><p>種別選択
+      <select name="type">
+        <option value="">普通</option>
+        <option value="">各駅停車</option>
+        <option value="">快速</option>
+        <option value="">特急</option>
+        <option value="">急行</option>
+        <option value="">寝台特急</option>
+        <option value="">準急</option>
+        <option value="">快速急行</option>
+      </select></p>
+    </th>
+    <th>
+     <p>行先</p>
+   <select name="destination">
+     <option value="">高崎</option>
+     <option value="">籠原</option>
+     <option value="">前橋</option>
+     <option value="">新前橋</option>
+     <option value="">深谷</option>
+     <option value="">熊谷</option>
+     <option value="">鴻巣</option>
+     <option value="">吹上</option>
+     <option value="">桶川</option>
+     <option value="">宮原</option>
+     <option value="">北本</option>
+     <option value="">桐生</option>
+     <option value="">佐野</option>
+     <option value="">岩宿</option>
+     <option value="">栃木</option>
+     <option value="">小山</option>
+     <option value="">水上</option>
+     <option value="">長岡</option>
+     <option value="">新潟</option>
+     <option value="">越後湯沢</option>
+     <option value="">新津</option>
+     <option value="">渋川</option>
+     <option value="">沼田</option>
+     <option value="">六日町</option>
+     <option value="">直江津</option>
+     <option value="">秋田</option>
+     <option value="">青森</option>
+     <option value="">横川</option>
+     <option value="">軽井沢</option>
+     <option value="">上田</option>
+     <option value="">長野</option>
+     <option value="">金沢</option>
+     <option value="">塩尻</option>
+     <option value="">松本</option>
+   </th>
     <th>
       <p>
         路線選択(直通放送用)
@@ -60,45 +158,90 @@
         <option value="">信越線回り</option>
         <option value="">中央線回り</option>
       </select>
+      <br>
+      <input type="radio" name="line_on" value="0">有効
+      <input type="radio" name="line_on" value="1">無効
     </th>
-      <th>
-       <p>行先</p>
-     <select name="destination">
-       <option value="">高崎</option>
-       <option value="">籠原</option>
-       <option value="">前橋</option>
-       <option value="">新前橋</option>
-       <option value="">深谷</option>
-       <option value="">熊谷</option>
-       <option value="">鴻巣</option>
-       <option value="">吹上</option>
-       <option value="">桶川</option>
-       <option value="">宮原</option>
-       <option value="">北本</option>
-       <option value="">桐生</option>
-       <option value="">佐野</option>
-       <option value="">岩宿</option>
-       <option value="">栃木</option>
-       <option value="">小山</option>
-       <option value="">水上</option>
-       <option value="">長岡</option>
-       <option value="">新潟</option>
-       <option value="">越後湯沢</option>
-       <option value="">新津</option>
-       <option value="">渋川</option>
-       <option value="">沼田</option>
-       <option value="">六日町</option>
-       <option value="">直江津</option>
-       <option value="">秋田</option>
-       <option value="">青森</option>
-       <option value="">横川</option>
-       <option value="">軽井沢</option>
-       <option value="">上田</option>
-       <option value="">長野</option>
-       <option value="">金沢</option>
-       <option value="">塩尻</option>
-       <option value="">松本</option>
-     </th></tr>
+      </tr>
+   <tr>
+     <th>
+       <select name="door">
+       <p>
+       <option value="">1</option>
+       <option value="">2</option>
+       <option value="">3</option>
+       <option value="">4</option>
+       <option value="">5</option>
+       <option value="">6</option>
+     </select>ドア<p>
+     </th>
+     <th>
+       <select name="cars"><p>
+         <option value="">1</option>
+         <option value="">2</option>
+         <option value="">3</option>
+         <option value="">4</option>
+         <option value="">5</option>
+         <option value="">6</option>
+         <option value="">7</option>
+         <option value="">8</option>
+         <option value="">9</option>
+         <option value="">10</option>
+         <option value="">11</option>
+         <option value="">12</option>
+         <option value="">13</option>
+         <option value="">14</option>
+         <option value="">15</option>
+       </select>両</p>
+     </th>
+     <th><p>切り離し放送
+       <input type="radio" name="detach" value="0">有効
+       <input type="radio" name="detach" value="1">無効
+       <br>
+       <input type="radio" name="front||back" value="0">前より
+       <input type="radio" name="front||back" value="1">後ろより
+       <select name="cars"><p>
+         <option value="">1</option>
+         <option value="">2</option>
+         <option value="">3</option>
+         <option value="">4</option>
+         <option value="">5</option>
+         <option value="">6</option>
+         <option value="">7</option>
+         <option value="">8</option>
+         <option value="">9</option>
+         <option value="">10</option>
+         <option value="">11</option>
+         <option value="">12</option>
+         <option value="">13</option>
+         <option value="">14</option>
+         <option value="">15</option>
+       </select>両は</p>
+       <select name="stop"><p>
+         <option value="">籠原</option>
+         <option value="">前橋</option>
+         <option value="">新前橋</option>
+         <option value="">深谷</option>
+         <option value="">熊谷</option>
+         <option value="">鴻巣</option>
+         <option value="">吹上</option>
+         <option value="">桶川</option>
+         <option value="">宮原</option>
+         <option value="">北本</option>
+         <option value="">桐生</option>
+         <option value="">佐野</option>
+         <option value="">岩宿</option>
+         <option value="">栃木</option>
+         <option value="">越後湯沢</option>
+         <option value="">新津</option>
+         <option value="">渋川</option>
+         <option value="">沼田</option>
+         <option value="">水上</option>
+         <option value="">長岡</option>
+         <option value=""></option>
+       </select>止まり</p>
+     </th>
+   </tr>
 
   </table>
 </div>

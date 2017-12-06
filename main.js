@@ -7,6 +7,7 @@ function setSoundParts() //
 	var id = "partsListSelect";
 	var index = document.getElementById(id).selectedIndex;
 	var addText = soundData[index][1];
+	//[soundDataの上から数えた値をindexに入る]
 
 	//入っている文字列を取り出す
 	var id = "inputTextarea";
